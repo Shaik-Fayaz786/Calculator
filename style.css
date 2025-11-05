@@ -1,0 +1,81 @@
+/* 🌈 Background */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #c3ecf4, #f5c7f7);
+  font-family: "Poppins", sans-serif;
+}
+
+/* 💎 Calculator Container */
+.calculator {
+  width: 330px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.4s ease;
+}
+
+/* 🪞 Display (Glass + Neon) */
+.display {
+  background: rgba(0, 0, 0, 0.85);
+  color: #00ffc3;
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  text-align: right;
+  overflow-x: auto;
+  box-shadow: inset 0 0 12px #00ffc3;
+}
+
+/* 🎯 Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* 🟢 General Button Style */
+.btn {
+  background: linear-gradient(145deg, #ffffff, #dce8ff);
+  border: none;
+  border-radius: 50%;
+  padding: 18px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌸 Button Colors */
+.operator { background: #ffb6b9; }
+.ac { background: #f38181; color: white; }
+.del { background: #fce38a; }
+.equal { background: #61c0bf; border-radius: 25px; }
+.zero { grid-column: span 2; border-radius: 25px; }
+
+/* ✨ Hover & Click Effects */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+}
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* 📱 Mobile Friendly */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+  .btn {
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
